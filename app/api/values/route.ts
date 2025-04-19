@@ -101,14 +101,15 @@ export async function GET(request: NextRequest) {
 
     const values = await collection.findOne<AccountDocument>({ account, project });
     if (!values) {
-      return NextResponse.json(
-        {
-          status: "error",
-          message: "No values found for the given account and project",
-          data: {},
-        } as GetResponse,
-        { status: 404 }
-      );
+      return NextResponse.json({
+        status: "success",
+        message: "Values retrieved successfully",
+        data: {
+          account,
+          project,
+          values: {},
+        },
+      });
     }
 
     const { _id, ...res } = values;

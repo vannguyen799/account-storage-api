@@ -11,11 +11,11 @@ export default function Home() {
         <CardContent className="space-y-4">
           <div>
             <h3 className="font-medium">POST /api/values</h3>
-            <p className="text-sm text-muted-foreground">Save account values to MongoDB</p>
+            <p className="text-sm text-muted-foreground">Save account values </p>
           </div>
           <div>
             <h3 className="font-medium">GET /api/values?account=X&project=Y</h3>
-            <p className="text-sm text-muted-foreground">Retrieve account values from MongoDB</p>
+            <p className="text-sm text-muted-foreground">Retrieve account values</p>
           </div>
           {/* <div>
             <h3 className="font-medium">GET /api/values/[id]</h3>

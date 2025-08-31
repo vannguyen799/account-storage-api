@@ -33,6 +33,14 @@ async function testDbConnection() {
   }
 }
 
+// app.use fix path when start with //
+app.use((req, res, next) => {
+  if (req.path.startsWith("//")) {
+    req.url = req.path.substring(1);
+  }
+  next();
+});
+
 // Routes
 app.use("/api/values", valueRoutes);
 
